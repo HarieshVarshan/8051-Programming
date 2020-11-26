@@ -1,0 +1,83 @@
+C51 COMPILER V9.59.0.0   TRAFFIC_FLOW_CONTROL                                              09/29/2019 08:32:56 PAGE 1   
+
+
+C51 COMPILER V9.59.0.0, COMPILATION OF MODULE TRAFFIC_FLOW_CONTROL
+OBJECT MODULE PLACED IN .\Objects\Traffic Flow Control.obj
+COMPILER INVOKED BY: D:\SOFTWARES\KEILV5\C51\BIN\C51.EXE Traffic Flow Control.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXT
+                    -END PRINT(.\Listings\Traffic Flow Control.lst) TABS(2) OBJECT(.\Objects\Traffic Flow Control.obj)
+
+line level    source
+
+*** WARNING C500 IN LINE 1 OF Traffic Flow Control.c: LICENSE ERROR (R230(2): CONNECT TO UVISION KERNEL FAILED)
+
+   1          #include<reg51.h>
+   2          void delay()
+   3          {
+   4   1        int i,j;
+   5   1        for(i=0;i<50;i++)
+   6   1         for(j=0;j<1275;j++);
+   7   1      }
+   8          void disp(int x,int count)
+   9          {
+  10   1        int i,j,y;
+  11   1        char a[]={0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X67};
+  12   1        if(count%2==0)
+  13   1          y=1;
+  14   1        else
+  15   1          y=0;
+  16   1        for(i=x;i>=y;i--)
+  17   1        {
+  18   2          for(j=9;j>=0;j--)
+  19   2          {
+  20   3            P2=a[i];
+  21   3            P3=a[j];
+  22   3            delay();
+  23   3          }
+  24   2        }
+  25   1        count++;
+  26   1      }
+  27          void main()
+  28          {
+  29   1        int i,j,count=0;
+  30   1        char b[]={0X44,0X11,0X44,0X22,0X11,0X44,0X22,0X44,0X88,0X11,0X88,0X22,0X11,0X88,0X22,0X88};
+  31   1        P0=0X00;
+  32   1        P1=0X00;
+  33   1        P2=0X00;
+  34   1        P3=0X00;
+  35   1        j=0;
+  36   1        while(1)
+  37   1        {
+  38   2        for(i=0;i<16;i++)
+  39   2        {
+  40   3          P0=b[i];
+  41   3          P1=b[i+1];
+  42   3          if(j%2==0)
+  43   3          {
+  44   4            disp(4,count);
+  45   4          }
+  46   3          else
+  47   3          {
+  48   4            disp(0,count);
+  49   4          }
+  50   3          j++;
+  51   3          i++;
+  52   3          count++;
+  53   3        }
+C51 COMPILER V9.59.0.0   TRAFFIC_FLOW_CONTROL                                              09/29/2019 08:32:56 PAGE 2   
+
+  54   2      }}
+  55            
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    288    ----
+   CONSTANT SIZE    =     26    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      38
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  1 WARNING(S),  0 ERROR(S)
