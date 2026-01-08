@@ -1,0 +1,27 @@
+# Build output
+build/
+*.ihx
+*.hex
+*.asm
+*.lst
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+*.lk
+*.bin
+
+# Local/IDE files
+.*
+!.gitignore
+SNAPSHOT.md
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
