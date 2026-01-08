@@ -1,0 +1,13 @@
+# Build output
+build/
+
+# SDCC generated files
+*.asm
+*.lst
+*.rst
+*.sym
+*.rel
+*.map
+*.mem
+*.lk
+*.ihx
