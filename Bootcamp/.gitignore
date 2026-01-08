@@ -1,0 +1,22 @@
+# Build output
+build/
+*.ihx
+*.hex
+*.asm
+*.lst
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+*.lk
+*.bin
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
