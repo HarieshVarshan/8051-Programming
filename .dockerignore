@@ -1,0 +1,36 @@
+# Git
+.git
+.gitignore
+
+# Build outputs
+**/build/
+*.ihx
+*.hex
+*.asm
+*.lst
+*.map
+*.mem
+*.rel
+*.rst
+*.sym
+*.lk
+*.bin
+
+# IDE/Editor files
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Proteus files (large binary files)
+**/*.pdsprj
+**/*.pdsbak
+
+# Documentation
+*.md
+!README.md
