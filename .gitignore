@@ -15,6 +15,8 @@ build/
 # Local/IDE files
 .*
 !.gitignore
+!.dockerignore
+!.github/
 SNAPSHOT.md
 
 # Editor files

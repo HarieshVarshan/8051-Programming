@@ -44,7 +44,32 @@ Each module includes:
 
 ## Getting Started
 
-### Prerequisites
+### Option 1: Docker (Recommended)
+
+No installation required - just Docker. Uses pre-built image from GitHub Container Registry.
+
+```bash
+# Enter the development container
+docker compose run --rm dev
+
+# Inside container, build any project
+cd Projects/Traffic\ Flow\ Control
+make
+```
+
+Or build directly without entering the container:
+
+```bash
+docker compose run --rm dev make -C "Projects/Traffic Flow Control"
+```
+
+To build the image locally instead:
+
+```bash
+docker compose run --rm dev-local
+```
+
+### Option 2: Local Installation
 
 ```bash
 # Install SDCC compiler
