@@ -46,10 +46,10 @@ Each module includes:
 
 ### Option 1: Docker (Recommended)
 
-No installation required - just Docker.
+No installation required - just Docker. Uses pre-built image from GitHub Container Registry.
 
 ```bash
-# Build and enter the development container
+# Enter the development container
 docker compose run --rm dev
 
 # Inside container, build any project
@@ -61,6 +61,12 @@ Or build directly without entering the container:
 
 ```bash
 docker compose run --rm dev make -C "Projects/Traffic Flow Control"
+```
+
+To build the image locally instead:
+
+```bash
+docker compose run --rm dev-local
 ```
 
 ### Option 2: Local Installation

@@ -16,6 +16,7 @@ build/
 .*
 !.gitignore
 !.dockerignore
+!.github/
 SNAPSHOT.md
 
 # Editor files

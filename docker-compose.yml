@@ -1,8 +1,19 @@
 services:
+  # Default: Use pre-built image from GitHub Container Registry
   dev:
-    build: .
-    image: 8051-dev
+    image: ghcr.io/harieshvarshan/8051-dev:latest
     container_name: 8051-dev
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true
+
+  # Alternative: Build locally (use with: docker compose run --rm dev-local)
+  dev-local:
+    build: .
+    image: 8051-dev:local
+    container_name: 8051-dev-local
     volumes:
       - .:/workspace
     working_dir: /workspace
