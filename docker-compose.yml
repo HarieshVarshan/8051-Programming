@@ -1,0 +1,10 @@
+services:
+  dev:
+    build: .
+    image: 8051-dev
+    container_name: 8051-dev
+    volumes:
+      - .:/workspace
+    working_dir: /workspace
+    stdin_open: true
+    tty: true

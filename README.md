@@ -44,7 +44,26 @@ Each module includes:
 
 ## Getting Started
 
-### Prerequisites
+### Option 1: Docker (Recommended)
+
+No installation required - just Docker.
+
+```bash
+# Build and enter the development container
+docker compose run --rm dev
+
+# Inside container, build any project
+cd Projects/Traffic\ Flow\ Control
+make
+```
+
+Or build directly without entering the container:
+
+```bash
+docker compose run --rm dev make -C "Projects/Traffic Flow Control"
+```
+
+### Option 2: Local Installation
 
 ```bash
 # Install SDCC compiler
